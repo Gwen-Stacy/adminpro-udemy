@@ -1,5 +1,6 @@
 import { Injectable, Inject } from '@angular/core';
-import {DOC
+import { DOCUMENT } from '@angular/common';
+// import {DOC
 
 
 @Injectable()
@@ -36,8 +37,9 @@ export class SettingsService {
   }
 
   aplicarTema( tema: string ) {
-    const url = `assets/css/colors/${ tema }.css`;
-    this._document.getElementById('tema').setAttribute('href', url );
+    let url = `assets/css/colors/${ tema }.css`;
+    // this._document.getElementById('tema').setAttribute('href', url );
+    // this._document.getElementById('tema').setAttribute('href', url)
 
     this.ajustes.tema = tema;
     this.ajustes.temaUrl = url;
